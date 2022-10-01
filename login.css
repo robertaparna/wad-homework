@@ -1,0 +1,112 @@
+header{
+    display: flex;
+    overflow: hidden;
+    position:absolute;
+    width: 100%;
+    justify-content:space-around;
+}
+
+.header{
+    padding-top: 15px;
+    width: 80%;
+    height: 30px;
+}
+.header a{
+    color: black;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Gill Sans MT';
+    font-weight: 200;
+    letter-spacing: 2px;
+    
+}
+header .material-symbols-outlined{
+    padding-top: 10px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 34px;
+}
+
+form {
+    border: 30px solid #f1f1f1;
+
+  }
+  form > div{ /*Child Selector*/
+    background-color: rgb(196, 196, 196);
+  }
+
+  .flex-container{ /*Class Selector*/
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+.textfield{ /*Class selector*/
+    margin: 3px;
+}
+
+div p{/*Descendant Selector*/
+    font-family:'Gill Sans MT';
+}
+
+h2{
+    font-family:'Gill Sans MT';
+    font-size: 21px;
+}
+h2 + p{ /*Adjacent Sibling Selector*/
+    letter-spacing: 1px;
+}
+
+h2~p{ /*General Sibling Selector*/
+    font-size: 16px;
+    margin: 3px;
+}
+
+button{
+    margin: 3px;
+    background-color: rgb(48, 186, 240);
+}
+button:hover{
+    opacity: 0.7;
+}
+
+a:link{ /*Pseudo-class Selector*/
+    text-decoration: none;
+    color: rgb(0, 153, 255);
+}
+
+a:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+    color: rgb(0, 153, 255);
+
+}
+#psw { /*ID selector*/
+    font-family:'Gill Sans MT';
+    font-size: 15px;
+    margin: 2px;
+}
+#psw a:visited{
+    text-decoration: none;
+    color: rgb(57, 205, 250);
+}
+#create a:visited{
+    text-decoration: none;
+    color: rgb(57, 205, 250);
+}
