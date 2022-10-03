@@ -4,10 +4,11 @@ header{
     position: fixed;
     left: 0;
     right:0;
-    margin: 0 ;
+    margin: 0;
+    top: 0;
     justify-content:space-around;
-    padding: 1%;
-}
+    z-index: 1;
+    box-shadow: 5px 5px 15px 0 #999999;}
 
 header > div{
     display: flex;
@@ -16,8 +17,7 @@ header > div{
     width: 100%;
 }
 .header {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 20px;
     width: 80%;
     height: 30px;
 }
@@ -27,13 +27,13 @@ header > div{
     padding: 10px;
     text-decoration: none;
     font-size: 24px;
-    font-family: 'Gill Sans MT';
+    font-family: 'Gill Sans MT', serif;
     font-weight: 200;
     letter-spacing: 2px;
 
 }
 header .material-symbols-outlined{
-    padding: 10px;
+    padding: 20px;
     height: inherit;
     align-items: center;
     list-style: none;
@@ -41,4 +41,7 @@ header .material-symbols-outlined{
 }
 form > div{ /*Child Selector*/
     background-color: rgb(196, 196, 196);
+}
+div p{/*Descendant Selector*/
+    font-family: 'Gill Sans MT', serif;
 }
