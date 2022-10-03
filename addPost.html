@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Post</title>
+    <link rel="stylesheet" href="addPost.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
+
+<header>
+    <div class = "header"><a href="index.html">HOME</a></div>
+    <span class="material-symbols-outlined">account_circle</span>
+</header>
+
+<form action="index.html">
+    <div class="flex-container">
+        <div class = "grid">
+            <p id="grid-left"> <label for = "PostBody">Post Body</label></p>
+            <p> <textarea id = "PostBody" placeholder="textarea" type = "text" required></textarea></p>
+            <p id="grid-left"> <label for = "SelectFile">Select file</label></p>
+            <p> <button id = "SelectFile" type="file">Choose file</button></p>
+        </div>
+    <div>
+        <button type="submit" id = "CreatePost">Create post</button>
+    </div>
+    </div>
+</form>
 <body>
 
 </body>
