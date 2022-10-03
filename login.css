@@ -1,46 +1,4 @@
-header{
-    display: flex;
-    overflow: hidden;
-    position:absolute;
-    width: 100%;
-    justify-content:space-around;
-}
-
-.header{
-    padding-top: 15px;
-    width: 80%;
-    height: 30px;
-}
-.header a{
-    color: black;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-size: 24px;
-    font-family: 'Gill Sans MT';
-    font-weight: 200;
-    letter-spacing: 2px;
-    
-}
-header .material-symbols-outlined{
-    padding-top: 10px;
-    height: inherit;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    font-size: 34px;
-}
-
-form {
-    border: 30px solid #f1f1f1;
-
-  }
-  form > div{ /*Child Selector*/
-    background-color: rgb(196, 196, 196);
-  }
-
-  .flex-container{ /*Class Selector*/
+.flex-container{ /*Class Selector*/
     display: flex;
     flex-direction: column;
     position: absolute;
