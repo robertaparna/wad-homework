@@ -1,0 +1,20 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    padding-top: 250px;
+    align-items: center;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    justify-content: flex-start;
+}
+
+.feed > .post {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(196, 196, 196);
+}
