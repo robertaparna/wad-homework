@@ -1,3 +1,6 @@
+body {
+    margin: 0!important;
+}
 header{
     display: block;
     overflow: hidden;
@@ -15,6 +18,7 @@ header > div{
     background-color: #f1f1f1;
     justify-content: space-between;
     width: 100%;
+    gap: 10px;
 }
 .header {
     padding: 20px;
