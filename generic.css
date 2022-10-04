@@ -11,7 +11,8 @@ header{
     top: 0;
     justify-content:space-around;
     z-index: 1;
-    box-shadow: 5px 5px 15px 0 #999999;}
+    box-shadow: 5px 5px 15px 0 #999999;
+}
 
 header > div{
     display: flex;
@@ -34,8 +35,13 @@ header > div{
     font-family: 'Gill Sans MT', serif;
     font-weight: 200;
     letter-spacing: 2px;
+    transition: background-color 500ms ease-out 100ms
 
 }
+.header a:hover {
+    background-color: #d5d5d5;
+}
+
 header .material-symbols-outlined{
     padding: 20px;
     height: inherit;
