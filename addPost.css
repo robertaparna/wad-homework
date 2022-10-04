@@ -32,6 +32,9 @@ button:hover{
     background-color: #f1f1f1;
     color: blue;
 }
+a:hover{
+    opacity: 0.7;
+}
 
 .grid{
     margin: 30px ;
@@ -44,7 +47,7 @@ button:hover{
     margin: 10px;
     
 }
-#grid-left {
+.grid-left {
     justify-content: center;
     text-align: center;
     margin: 10px;
