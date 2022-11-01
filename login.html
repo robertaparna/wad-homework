@@ -13,7 +13,14 @@
         <div class="header">
             <a href="index.html">Home</a>
         </div>
-        <span class="material-symbols-outlined">account_circle</span>
+            
+            <span onclick="myFunction()" class="material-symbols-outlined">account_circle</span>
+            <div class="dropdown" id="dropdown" ></div>
+            <div class="dropdown-content">
+                <a class="menu-items">John Doe</ha>
+                <a class="menu-items">john.doe@gmail.com</a>
+                <a href="#" class="menu-items">Logout</a></div>
+        </div>
     </div>
 </header>
 <body>
@@ -29,7 +36,7 @@
 <div class="textfield">
     <input type="password" placeholder="Enter Password" name="psw" required>
 </div> 
-    <button type="submit">Log in</button>
+    <button class="login" type="submit">Log in</button>
     <div class="textfield">
     <span id="psw"><a href="#">Forgot password?</a></span>
     </div>

@@ -33,11 +33,11 @@ h2~p{ /*General Sibling Selector*/
     margin: 3px;
 }
 
-button{
+ .login{
     margin: 3px;
     background-color: rgb(48, 186, 240);
 }
-button:hover{
+ .login:hover{
     opacity: 0.7;
 }
 
