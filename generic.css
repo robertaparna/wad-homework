@@ -49,34 +49,55 @@ header .material-symbols-outlined{
     list-style: none;
     font-size: 34px;
     cursor: pointer;
+    transition: 0.5s;
 
 }
-.dropdown{
+header .material-symbols-outlined:hover{
+    color: rgb(48, 186, 240);
+}
+.action{
+    position: fixed;
+}
+.action .dropdown-menu{
     position: absolute;
-    top: 100%;
-    right: 10%;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s;
+    top: 70px;
+    right: -5px;
+    padding: 5x 5px;
+    background-color:gray;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.action .dropdown-menu::before{  
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 32px;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    transform: rotate(45deg);
 
 }
-.dropdown.open-menu{
-    max-height:fit-content 400px;
+.action .dropdown-menu.active{
+    visibility: visible;
 }
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: #f0ebeb;
-    min-width: 160px;
-    z-index: 1;
-}
-.dropdown-content .menu-items{
-    display: flex;
+
+.action .dropdown-menu ul li{
+    list-style: none;
+    padding: 5px;
+    direction: flex;
     align-items: center;
-    width: 100%;
-    color: black;
 }
-.show {display:block;}
+.action .dropdown-menu ul li a{
+    display: inline;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+.action .dropdown-menu ul li a:hover{
+    color:rgb(48, 186, 240);
+    
+}
 
 form > div{ /*Child Selector*/
     background-color: rgb(196, 196, 196);

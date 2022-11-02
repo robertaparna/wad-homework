@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="generic.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
+    <script src="JavaScript.js"></script>
 </head>
 <header>
-    <div>
+    <div class="action">
         <div class="header">
             <a href="index.html">Home</a>
         </div>
-            
-            <span onclick="myFunction()" class="material-symbols-outlined">account_circle</span>
-            <div class="dropdown" id="dropdown" ></div>
-            <div class="dropdown-content">
-                <a class="menu-items">John Doe</ha>
-                <a class="menu-items">john.doe@gmail.com</a>
-                <a href="#" class="menu-items">Logout</a></div>
+        <span class="material-symbols-outlined" onclick="dropdownMenu();">account_circle</span>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="#">John Doe</a></li>
+                <li><a href="#">john.doe@gmail.com</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
         </div>
     </div>
 </header>
