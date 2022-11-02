@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="generic.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
+    <script src="JavaScript.js"></script>
 </head>
 <header>
-    <div class="header">
-        <a href="index.html">Home</a></div>
-        <span class="material-symbols-outlined">account_circle</span>
+    <div class="action">
+        <div class="header">
+            <a href="index.html">Home</a>
+        </div>
+        <span class="material-symbols-outlined" onclick="dropdownMenu();">account_circle</span>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="#">John Doe</a></li>
+                <li><a href="#">john.doe@gmail.com</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
 </header>
 <body>
 <form action="index.html" method="post">
@@ -26,7 +37,7 @@
 <div class="textfield">
     <input type="password" placeholder="Enter Password" name="psw" required>
 </div> 
-    <button type="submit">Log in</button>
+    <button class="login" type="submit">Log in</button>
     <div class="textfield">
     <span id="psw"><a href="#">Forgot password?</a></span>
     </div>
