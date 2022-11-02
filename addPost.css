@@ -38,22 +38,7 @@ form {
   }
 form > div{ /*Child Selector*/
     background-color: rgb(196, 196, 196);
-  }
-
-.flex-container{ /*Class Selector*/
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-items: center;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    padding: 10px;
-    justify-content: center;
-}
+}  
 .textfield{ /*Class selector*/
     margin: 3px;
 }
