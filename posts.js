@@ -50,8 +50,8 @@ window.onload = function () {
         return footerContainer;
     }
 
-    // fetch('http://myjson.dit.upm.es/api/bins/bsna')
-    fetch('posts.json') //Fetch data from local JSON file
+    fetch('http://myjson.dit.upm.es/api/bins/bsna')
+    //fetch('posts.json') //Fetch data from local JSON file
         .then((response) => response.json())
         .then(json => {
             let feed = document.getElementById("feed")
