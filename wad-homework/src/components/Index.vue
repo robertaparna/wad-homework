@@ -28,9 +28,6 @@ export default {
     Post
   },
   methods: {
-    goToAddPost () {
-      this.$router.push("/add-post")
-    },
     resetLikes() {
       this.$store.commit("nullLikes")
     }
@@ -46,3 +43,11 @@ import Post from "@/components/Post.vue";
 
 
 </script>
+
+<style>
+  @media screen and (max-width: 600px ) {
+
+  
+  }
+
+</style>

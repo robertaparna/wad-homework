@@ -1,14 +1,15 @@
 <script setup>
 import Index from './components/Index.vue'
+import Header from "@/components/Header.vue";
 </script>
 
 <template>
   <main>
-    <Index />
+    <Header></Header>
+    <router-view/>
   </main>
 </template>
-<script>export default {
-  data(){
-    return{}
-  }
+<script>
+export default {
+
 } </script>
