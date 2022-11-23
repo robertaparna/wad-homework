@@ -1,6 +1,6 @@
 <template>
   <body>
-    <Header></Header>
+  <Header></Header>
   <div class="feed" id="feed">
     <Post v-for="post in posts" :post=post />
   </div>
@@ -24,7 +24,8 @@ export default {
     ThumbUpOutline,
     AccountCircleOutline,
     Header,
-    Footer
+    Footer,
+    Post
   },
   methods: {
     goToAddPost () {
@@ -39,9 +40,9 @@ export default {
   }
 }
 import '../assets/index.css'
-import Post from "@/components/Post.vue";
+import ThumbUpOutline from "vue-material-design-icons/ThumbUpOutline.vue";
 import AccountCircleOutline from 'vue-material-design-icons/AccountCircleOutline.vue'
-import 'JavaScript.js'
+import Post from "@/components/Post.vue";
 
 
 </script>

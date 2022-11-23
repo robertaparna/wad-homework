@@ -2,7 +2,7 @@
     <header>
     <div class="header">
         <div class="action">
-      <div class="header">
+      <div >
         <a href="index.html">Home</a>
         <a href="addPost.html">Add post</a>
       </div>
@@ -21,10 +21,111 @@
   </template>
   
   <script>
-  import '../assets/generic.css'
   export default {
     name:'Header'
 
   };
   </script>
+
+<style>
+header{
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right:0;
+  margin: 0;
+  top: 0;
+  justify-content:space-around;
+  z-index: 1;
+  box-shadow: 5px 5px 15px 0 #999999;
+}
+
+header > div{
+  display: flex;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+.header {
+  padding: 20px;
+  width: 80%;
+  height: 30px;
+}
+.header a{
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: 'Gill Sans MT', serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  transition: background-color 500ms ease-out 100ms
+
+}
+.header a:hover {
+  background-color: #d5d5d5;
+}
+
+header .material-symbols-outlined{
+  padding: 20px;
+  height: inherit;
+  align-items: center;
+  list-style: none;
+  font-size: 34px;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+header .material-symbols-outlined:hover{
+  color: rgb(48, 186, 240);
+}
+.action{
+  position: fixed;
+}
+.action .dropdown-menu{
+  position: absolute;
+  top: 60px;
+  right: 2px;
+  padding: 5x 5px;
+  margin: 10px;
+  background-color:gray;
+  border-radius: 10px;
+  visibility: hidden;
+  width: 220px;
+}
+.action .dropdown-menu::before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: 5px;
+  width: 30px;
+  height: 20px;
+  background-color: gray;
+  transform: rotate(45deg);
+
+}
+.action .dropdown-menu.active{
+  visibility: visible;
+}
+
+.action .dropdown-menu ul li{
+  list-style: none;
+  padding: 5px;
+  direction: flex;
+  align-items: center;
+}
+.action .dropdown-menu ul li a{
+  display: inline;
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+}
+.action .dropdown-menu ul li a:hover{
+  color:rgb(48, 186, 240);
+
+}
+</style>
   
