@@ -1,0 +1,63 @@
+.flex-container{ /*Class Selector*/
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+.textfield{ /*Class selector*/
+    margin: 3px;
+    color: rgb(0, 153, 255);
+}
+
+div p{/*Descendant Selector*/
+    font-family:'Gill Sans MT';
+}
+
+h2{
+    font-family:'Gill Sans MT';
+    font-size: 21px;
+}
+
+ .signUp{
+    margin: 20px;
+    background-color: rgb(48, 186, 240);
+
+}
+ .signUp:hover{
+    opacity: 0.7;
+}
+
+a:link{ /*Pseudo-class Selector*/
+    text-decoration: none;
+    color: rgb(48, 186, 240);
+}
+
+a:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1ft 2ft;
+    margin-top: 10px;
+}
+.grid p {
+    text-align: right;
+    margin: 10px;
+    
+}
+.grid-left {
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
