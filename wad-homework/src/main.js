@@ -1,29 +1,22 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import VueRouter from 'vue-router';
-import Login from '@/components./Login.vue';
-import Index from '@/components./Index.vue';
+import { createApp } from 'vue'
+import App from './App.vue'
+import store from './store'
+import './assets/generic.css'
+import {createStore} from "vuex";
 
-const Home = { template: '<div>Home</div>' }
-const About = { template: '<div>About</div>' }
-
-const routes = [
-    {
-        path: '/',
-        component: Login
-    },
-    {
-        path: '/index',
-        name: 'Index.vue',
-        component: Index
-    }
-];
-const router = new VueRouter({
-    routes: routes
-})
-
-const app = Vue.createApp({})
-app.use(router)
+// const store = createStore({
+//     state () {
+//         return {
+//             count: 0
+//         }
+//     },
+//     mutations: {
+//         increment (state) {
+//             state.count++
+//         }
+//     }
+// })
+createApp(App).use(store).mount('#app')
 
 app.mount('#app')
 new Vue ({

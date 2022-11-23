@@ -1,39 +1,48 @@
 <template>
   <body>
-  <header>
-    <div class="action">
-      <div class="header">
-        <router-link to="/Index">Home</router-link>
-        <a href="addPost.html">Add post</a>
+    <Header></Header>
+  <div class="feed" id="feed">
+    {{ name }}
+    <div class="post" v-for="post in posts">
+      <div class="post-header">
+        <span>
+          <AccountCircleOutline/>
+        </span>
+        <p>
+          {{ post.date }}
+        </p>
       </div>
-      <span class="material-symbols-outlined" onclick="dropdownMenu();">account_circle</span>
-      <div class="dropdown-menu">
-        <ul>
-          <li><a href="#">John Doe</a></li>
-          <li><a href="#">john.doe@gmail.com</a></li>
-          <li><router-link to="/Login">Logout</router-link></li>
-        </ul>
+      <div class="post-img">
+        <img :src="post.picture">
+      </div>
+      <div class="post-content">
+        <p>
+          {{ post.body }}
+        </p>
+      </div>
+      <div>
+        <ThumbUpOutline/>
       </div>
     </div>
-  </header>
-
-  <div class="feed" id="feed">
   </div>
-
-  <div class="footer">
-    <p>Copyright © Group AQ.</p>
-    <p>2022</p>
-  </div>
+  <Footer></Footer>
   </body>
 </template>
 <script>
+import Header from './Header.vue'
+import Footer from "./Footer.vue"
 export default {
-  data (){
-    return{}
+  name: "myHeader",
+  components: {
+    'Header':Header,
+    'Footer':Footer
   }
 }
+import '../assets/index.css'
+import ThumbUpOutline from 'vue-material-design-icons/ThumbUpOutline.vue'
+import AccountCircleOutline from 'vue-material-design-icons/AccountCircleOutline.vue'
+
 </script>
-<router-view></router-view>
 
 <style scoped>
 
