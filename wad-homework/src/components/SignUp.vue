@@ -1,12 +1,5 @@
 <template>
-<header>
-  <div class="action">
-      <div class="header">
-          <a href="index.html">Home</a>
-      </div>
-      <span class="material-symbols-outlined">account_circle</span>
-      </div>
-</header>
+
 <body>
 <form @submit="onSubmit" method="post">
   <div class="flex-container">
