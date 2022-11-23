@@ -139,3 +139,20 @@ div p{/*Descendant Selector*/
         justify-content: center;
     }
 }
+.footer {
+
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: dimgray;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 !important;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}

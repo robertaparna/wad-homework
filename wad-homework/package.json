@@ -7,7 +7,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.41"
+    "l": "^0.6.0",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.2",

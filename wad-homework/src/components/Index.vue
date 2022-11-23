@@ -3,7 +3,7 @@
   <header>
     <div class="action">
       <div class="header">
-        <a href="index.html">Home</a>
+        <router-link to="/Index">Home</router-link>
         <a href="addPost.html">Add post</a>
       </div>
       <span class="material-symbols-outlined" onclick="dropdownMenu();">account_circle</span>
@@ -11,7 +11,7 @@
         <ul>
           <li><a href="#">John Doe</a></li>
           <li><a href="#">john.doe@gmail.com</a></li>
-          <li><a href="login.html">Logout</a></li>
+          <li><router-link to="/Login">Logout</router-link></li>
         </ul>
       </div>
     </div>
@@ -26,12 +26,14 @@
   </div>
   </body>
 </template>
-
 <script>
 export default {
-  name: "Index.vue"
+  data (){
+    return{}
+  }
 }
 </script>
+<router-view></router-view>
 
 <style scoped>
 

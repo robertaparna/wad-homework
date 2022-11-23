@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="generic.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="JavaScript.js"></script>
 </head>
 <header>
@@ -37,7 +38,10 @@
 <div class="textfield">
     <input type="password" placeholder="Enter Password" name="psw" required>
 </div> 
-    <button class="login" type="submit">Log in</button>
+<div class="inline">
+    <a href="index.html"><button class="button" type="submit">Log in</button></a>
+    <a href="signUp.html" ><button class="button"  type="button" title="Don't have an account? Sign up!">Sign up</button></a>
+</div>
     <div class="textfield">
     <span id="psw"><a href="#">Forgot password?</a></span>
     </div>

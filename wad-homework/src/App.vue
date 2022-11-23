@@ -6,9 +6,19 @@ import Index from './components/Index.vue'
 
 <template>
   <main>
+    <div id = "app">
+      <h1>Proov!!</h1>
+      <router-link to="/">Home</router-link>
+      <router-view></router-view>
+    </div>
     <Index />
   </main>
 </template>
+<script>export default {
+  data(){
+    return{}
+  }
+} </script>
 
 <style scoped>
 header {
@@ -37,4 +47,6 @@ header {
     flex-wrap: wrap;
   }
 }
+
+
 </style>
