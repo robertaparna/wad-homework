@@ -6,7 +6,7 @@
         <a href="index.html">Home</a>
         <a href="addPost.html">Add post</a>
       </div>
-      <span class="material-symbols-outlined" onclick="dropdownMenu();">account_circle</span>
+      <span class="material-symbols-outlined" onclick="dropdownMenu();"><AccountCircleOutline /></span>
       <div class="dropdown-menu">
         <ul>
           <li><a href="#">John Doe</a></li>
@@ -18,29 +18,10 @@
   </header>
 
   <div class="feed" id="feed">
-    {{ name }}
-    <div class="post" v-for="post in posts">
-      <div class="post-header">
-        <span>
-          <AccountCircleOutline/>
-        </span>
-        <p>
-          {{ post.date }}
-        </p>
-      </div>
-      <div class="post-img">
-        <img :src="post.picture">
-      </div>
-      <div class="post-content">
-        <p>
-          {{ post.body }}
-        </p>
-      </div>
-      <div>
-        <ThumbUpOutline/>
-      </div>
-
-    </div>
+    <Post v-for="post in posts" :post=post />
+  </div>
+  <div class="reset-button">
+    <button class="reset-button" v-on:click="resetLikes">Reset likes</button>
   </div>
 
   <div class="footer">
@@ -59,12 +40,25 @@ export default {
     }
   },
   components: {
-    ThumbUpOutline,
+    Post,
     AccountCircleOutline
+  },
+  methods: {
+    goToAddPost () {
+      this.$router.push("/add-post")
+    },
+    resetLikes() {
+      this.$store.commit("nullLikes")
+    }
+  },
+  mounted() {
+    this.$store.dispatch("fetchPosts")
   }
 }
 import '../assets/index.css'
-import ThumbUpOutline from 'vue-material-design-icons/ThumbUpOutline.vue'
+import Post from "@/components/Post.vue";
 import AccountCircleOutline from 'vue-material-design-icons/AccountCircleOutline.vue'
+import 'JavaScript.js'
+
 
 </script>

@@ -48,12 +48,31 @@
     padding-right: 15px;
 }
 
+.post-footer {
+    display: flex;
+    flex-direction: row;
+}
+
 button {
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
     overflow: hidden;
     outline: none;
+}
+
+.reset-button > button {
+    background-color: dimgray;
+    color: #f1f1f1;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    margin: auto auto 10px;
+    display: block;
+}
+
+.reset-button > div {
+    padding: 5px;
 }
 
 .footer {

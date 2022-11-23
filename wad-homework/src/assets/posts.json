@@ -1,0 +1,68 @@
+{
+    "Posts":
+     [      {
+              "id": 1,
+              "date": "30.10.2022",
+              "body": "Thank god for coffee, otherwise this homework would never be done.",
+              "likes": 0
+            },
+            {
+              "id": 2,
+              "date": "12.10.2022",
+              "picture": "https://www.swedishlapland.com/wp-content/uploads/800_skridskor_MLubbers-.jpg",
+              "body": "What a night!!!",
+              "likes": 0
+            },
+            {
+              "id": 3,
+              "date": "10.10.2022",
+              "body": "Where can you get good sushi in Tartu?",
+              "likes": 0
+            },
+            {
+              "id": 4,
+              "date": "01.10.2022",
+              "picture": "https://i.postimg.cc/0QTQ3w64/20221007-214443.jpg",
+              "body": "graceful fuzzball",
+              "likes": 0
+            },
+            {
+              "id": 5,
+              "date": "23.09.2022",
+              "body": "Happy Autumn Equinox! Hope the longer nights will bring more parties.",
+              "likes": 0
+            },
+            {
+              "id": 6,
+              "date": "13.09.2022",
+              "body": "Does anyone know what room the lab is in today?",
+              "likes": 0
+            },
+            {
+              "id": 7,
+              "date": "03.09.2022",
+              "picture": "https://s.err.ee/photo/crop/2019/10/14/697168h9a9dt46.jpg",
+              "body": "Tartu 2022",
+              "likes": 0
+            },
+            {
+              "id": 8,
+              "date": "01.09.2022",
+              "body": "Happy new school year!",
+              "likes": 0
+            },
+            {
+              "id": 9,
+              "date": "29.08.2022",
+              "body": "Can't wait to start studying again!",
+              "likes": 0
+            },
+            {
+              "id": 10,
+              "date": "23.07.2022",
+              "picture": "https://pbs.twimg.com/media/E6QlmdWX0AAtpQY?format=jpg&name=large",
+              "body": "My baby",
+              "likes": 0
+            }
+        ]
+    }
