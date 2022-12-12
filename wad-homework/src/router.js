@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Index from './components/Index.vue'
 import SignUp from './components/SignUp.vue'
 import AddPost from './components/AddPost.vue'
-import SignUp2 from "@/components/SignUp2.vue";
+import LoginUus from "@/components/LoginUus.vue";
 
 const routes = [{
         path: '/',
@@ -20,9 +20,9 @@ const routes = [{
         component: SignUp
     },
     {
-        path: '/sign-up2',
-        name: 'sign-up2',
-        component: SignUp2
+        path: '/login-uus',
+        name: 'login-uus',
+        component: LoginUus
     }
 ]
 

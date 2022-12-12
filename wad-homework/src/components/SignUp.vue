@@ -7,13 +7,15 @@
       <div class="grid">
           <p> <label for = "Email">Email</label></p>
           <p> <input type="email" placeholder="Enter Email" v-model="email" required>{{email}}</p>
-          <p style="{color: 'red'}">{{ errorMessage }}</p>
           <p> <label for = "Password">Password</label></p>
           <p> <input type="password" placeholder="Enter Password" v-model="password" required> </p>
-          <p style="{color: 'red'}">{{ errorMessage }}</p>
       </div>
-          <button class="button" type="submit" value="Submit">Sign Up</button>
-          <span id="psw"><a href="login.html">Already have an account?</a></span>
+          <router-link to="/"
+      custom
+      v-slot="{ navigate }">
+      <button class="signUp" @submit="onSubmit" @click="navigate" >Sign Up</button>
+    </router-link>
+
 </div>
 </form>
 </body>
@@ -26,8 +28,8 @@ import '../assets/signUp.css'
 export default {
   data() {
     return {
-      email: '',
-      password:'',
+      //email: '',
+      //password:'',
       errorMessage: ''
     }
   },

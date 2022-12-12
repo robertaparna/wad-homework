@@ -7,7 +7,7 @@
               <router-link to="/">Home</router-link>
               <RouterLink to="/add-post">Add post</RouterLink>
               <RouterLink to="/sign-up">Sign Up</RouterLink>
-              <RouterLink to="/sign-up2">Sign Up 2</RouterLink>
+              <RouterLink to="/login-uus">Login</RouterLink>
             </div>
           </div>
         </div>
