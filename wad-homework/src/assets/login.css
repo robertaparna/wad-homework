@@ -72,18 +72,19 @@ a:active{
     text-decoration: none;
 }
 /* button inspo https://freefrontend.com/css-buttons/ */
- .button{
+ .login{
     border: 5px;
     cursor: pointer;
     font-size: 12px;
   transform: translate(0);
   background-image: linear-gradient(45deg, #8420e8, #e548ea);
   padding: 0.7em 2em;
-  border-radius: 65px;
-  color: white;
+  border-radius: 12px;
+  color: black;
   margin-bottom: 7px;
 
 }
+
 .inline .button:after{
     content: "";
     border-radius: 18px;
@@ -104,4 +105,12 @@ a:active{
     display: inline-block;
     margin-top: 5px;
     align-items: center;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gill Sans MT', serif;
+    gap: 8px;
 }

@@ -9,22 +9,20 @@
           <p> <label for = "Password">Password</label></p>
           <p> <input type="password" placeholder="Enter Password" pattern= "^([A-Z])(?=.*[_])(?=.*[0-9])(?=.*[$@#&!]).{8,15}$" required > </p>
         </div>
-      <div class="grid">
-        <p>
+      <div class="buttons">
           <router-link
       to="/sign-up"
       custom
       v-slot="{ navigate }">
-          <button class="signUp" @click="navigate">Sign Up</button>
+          <button class="login" @click="navigate">Sign Up</button>
         </router-link>
-      <label>or</label>
-        </p>
+      <p>or</p>
         <router-link
       to="/"
       custom
       v-slot="{ navigate }">
-      <button class="signUp" @submit="onSubmit" @click="navigate" >Login</button>
-    </router-link>
+      <button class="login" @submit="onSubmit" @click="navigate" >Login</button>
+      </router-link>
       </div>
     </div>
   </form>
@@ -34,7 +32,7 @@
 
 <script>
 
-import '../assets/signUp.css'
+import '../assets/login.css'
 
 export default {
   data() {
