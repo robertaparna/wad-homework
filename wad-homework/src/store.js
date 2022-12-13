@@ -34,11 +34,12 @@ export default createStore({
     },
     actions: {
         fetchPosts ({ commit }) {
-            const uri = 'https://api.jsonbin.io/v3/b/637e6fa72b3499323b093cbe'
-            fetch(uri) //Fetch data from local JSON file
+            const uri = 'http://localhost:3000/api/posts/'
+            fetch(uri, { method : "GET"}) //Fetch data from local JSON file
                 .then((response) => response.json())
                 .then(json => {
-                    commit("setPostData", json.record.Posts)
+                    console.log(json)
+                    commit("setPostData", json)
                 }).catch(err => {
                 console.log(err)
             })
