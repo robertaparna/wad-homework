@@ -1,29 +1,40 @@
 <template>
-
-<body>
-<form @submit="onSubmit" method="post">
-  <div class="flex-container">
-      <h2>Sign up to PostIt</h2>
-      <div class="grid">
+  <body>
+    <form method="post">
+      <div class="flex-container">
+        <h2>Login to PostIt</h2>
+        <div class="grid">
           <p> <label for = "Email">Email</label></p>
-          <p> <input type="email" placeholder="Enter Email" v-model="email" required>{{email}}</p>
+          <p> <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" required> </p>
           <p> <label for = "Password">Password</label></p>
-          <p> <input type="password" placeholder="Enter Password" v-model="password" required> </p>
-      </div>
-          <router-link to="/"
+          <p> <input type="password" placeholder="Enter Password" pattern= "^([A-Z])(?=.*[_])(?=.*[0-9])(?=.*[$@#&!]).{8,15}$" required > </p>
+        </div>
+      <div class="grid">
+        <p>
+          <router-link
+      to="/sign-up"
       custom
       v-slot="{ navigate }">
-      <button class="signUp" @submit="onSubmit" @click="navigate" >Sign Up</button>
+          <button class="signUp" @click="navigate">Sign Up</button>
+        </router-link>
+      <label>or</label>
+        </p>
+        <router-link
+      to="/"
+      custom
+      v-slot="{ navigate }">
+      <button class="signUp" @submit="onSubmit" @click="navigate" >Login</button>
     </router-link>
+      </div>
+    </div>
+  </form>
+  </body>
 
-</div>
-</form>
-</body>
 </template>
 
 <script>
-import '../assets/signUp.css'
 
+import '../assets/signUp.css'
 
 export default {
   data() {
@@ -58,7 +69,7 @@ export default {
         "It should start with an uppercase alphabet." +'\n'+
         "It should include the character “_” " 
       }
-    }
+    },
   },
   watch: {
     email(value){
@@ -69,5 +80,4 @@ export default {
     }
   },
 }
-
 </script>
