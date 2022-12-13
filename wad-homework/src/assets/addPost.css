@@ -1,41 +1,59 @@
-form > div{ /*Child Selector*/
+ .container{
+    position: absolute;
     background-color: rgb(196, 196, 196);
-}  
-.textfield{ /*Class selector*/
-    margin: 3px;
-}
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    align-items: center;
+ }
+ .body{
+    vertical-align: middle;
+ }
 
-div p{/*Descendant Selector*/
+
+.body label{
+    display: inline-block;
+    text-align: right;
+    float: left;
+    margin-right: 10px; /*Kaugus 'Body' ja tekstfieldi vahel*/
+    margin-left: 10px; /*'Body' kaugus äärest*/
     font-family:'Gill Sans MT';
+    font-size: 14pt;
+    
+}
+.body input{
+    height: 50px;
+    font-size: 14pt;
+    border-radius: 8px;
+    font-style: italic;
+}
+.container h1{
+    font-family:'Gill Sans MT';
+    position: relative;
+    margin: 10%;
 }
 
 button{
-    margin: 3px;
-    background-color: rgb(48, 186, 240);
+    margin: 0;
+    border-radius: 12px;
+    background-color: rgb(127, 99, 200);
+    position: relative;
+    /*top: 15%;
+    left: 30%;
+    width: 30%;
+    height: 15%; um see mudab Like'ide nuppu ka*/
+    
+
 }
 button:hover{
     background-color: #f1f1f1;
-    color: blue;
+    color: rgb(127, 99, 200);
 }
 a:hover{
     opacity: 0.7;
-}
-
-.grid{
-    margin: 30px ;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1ft 2ft;
-}
-.grid p {
-    text-align: left;
-    margin: 10px;
-    
-}
-.grid-left {
-    justify-content: center;
-    text-align: center;
-    margin: 10px;
 }
 #PostBody {
     height: 80px;
@@ -45,3 +63,4 @@ a:hover{
 #SelectFile {
     width:fit-content;
 }
+
