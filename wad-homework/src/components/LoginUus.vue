@@ -5,26 +5,24 @@
         <h2>Login to PostIt</h2>
         <div class="grid">
           <p> <label for = "Email">Email</label></p>
-          <p> <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" required> </p>
+          <p> <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" required v-model="user.email"> </p>
           <p> <label for = "Password">Password</label></p>
-          <p> <input type="password" placeholder="Enter Password" pattern= "^([A-Z])(?=.*[_])(?=.*[0-9])(?=.*[$@#&!]).{8,15}$" required > </p>
+          <p> <input name="password" type="password" placeholder="Enter Password" pattern= "^([A-Z])(?=.*[_])(?=.*[0-9])(?=.*[$@#&!]).{8,15}$" required v-model="user.password"> </p>
         </div>
-      <div class="grid">
-        <p>
+      <div class="buttons">
           <router-link
       to="/sign-up"
       custom
       v-slot="{ navigate }">
-          <button class="signUp" @click="navigate">Sign Up</button>
+          <button class="login" @click="navigate">Sign Up</button>
         </router-link>
-      <label>or</label>
-        </p>
+      <p>or</p>
         <router-link
       to="/"
       custom
       v-slot="{ navigate }">
-      <button class="signUp" @submit="onSubmit" @click="navigate" >Login</button>
-    </router-link>
+      <button class="login" @submit="onSubmit" @click="navigate" >Login</button>
+      </router-link>
       </div>
     </div>
   </form>
@@ -34,14 +32,15 @@
 
 <script>
 
-import '../assets/signUp.css'
+import '../assets/login.css'
 
 export default {
   data() {
     return {
-      //email: '',
-      //password:'',
-      errorMessage: ''
+      user: {
+        email: '',
+        password:'',
+      }
     }
   },
   methods: {

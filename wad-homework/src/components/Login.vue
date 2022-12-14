@@ -10,4 +10,3 @@ export default {
 import '../assets/login.css'
 </script>
 <router-view></router-view>
-<style scoped>

@@ -5,7 +5,7 @@
         <label>Body</label>
         <input type="text" placeholder="body">
       </div>
-    <button>Add</button>
+    <button class="add-post">Add</button>
 </div>
 </template>
 
