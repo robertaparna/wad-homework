@@ -1,4 +1,4 @@
- .container{
+ .form{
     position: absolute;
     background-color: rgb(196, 196, 196);
     top: 50%;
@@ -10,31 +10,31 @@
     align-items: center;
     border-radius: 10px;
  }
- .body{
-    vertical-align: middle;
+ h3{
+    text-align: center;
+    font-family:'Gill Sans MT';
+    color: #004798;
+    margin: 30px auto;
+    font-size: 18pt;
  }
 
-
-.body label{
+.Label{ 
     display: inline-block;
     text-align: right;
     float: left;
     margin-right: 10px; /*Kaugus 'Body' ja tekstfieldi vahel*/
-    margin-left: 10px; /*'Body' kaugus äärest*/
+    margin-left: 10px; /*'Body' kaugus äärest*/ 
     font-family:'Gill Sans MT';
     font-size: 14pt;
+    color: #004798;
+    font-weight: bold;
     
 }
-.body input{
-    height: 50px;
+.Input{
+    height: 30%;
     font-size: 14pt;
     border-radius: 8px;
     font-style: italic;
-}
-.container h1{
-    font-family:'Gill Sans MT';
-    position: relative;
-    margin: 10%;
 }
 
 .add-post {
@@ -51,18 +51,6 @@
 
 }
 button:hover{
-    background-color: #f1f1f1;
-    color: rgb(127, 99, 200);
-}
-a:hover{
-    opacity: 0.7;
-}
-#PostBody {
-    height: 80px;
-    flex-wrap: wrap;
-
-}
-#SelectFile {
-    width:fit-content;
+    color: rgb(242, 237, 255);
 }
 
