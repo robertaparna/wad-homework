@@ -1,3 +1,11 @@
-valideerimiseks kasutasin https://jsonlint.com/
+Andmebaasi sisenemine: 
+terminaliaknas kaustas \wad-homework\wad-homework\src\service 
+ - muuda enne database.js parool ja andmebaasi nimi ära 
+ $ npm install
+ $ nodemon server
 
-hoiustamiseks? https://jsonbin.io/, https://www.jsonkeeper.com/ ?
+Vue käivitamine: 
+terminaliaknas wad-homework/wad-homework 
+ $ npm install
+ $ npm run dev
+
