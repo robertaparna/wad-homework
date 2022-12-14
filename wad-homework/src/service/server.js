@@ -91,6 +91,11 @@ app.put('/api/posts/:id', async(req, res) => {
     }
 });
 
+app.get('/auth/logout', (req, res) => {
+    console.log('delete jwt request arrived');
+    res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
+});
+
 app.delete('/api/posts/:id', async(req, res) => {
     try {
         const { id } = req.params;
