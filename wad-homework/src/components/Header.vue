@@ -8,6 +8,7 @@
               <RouterLink to="/add-post">Add post</RouterLink>
               <RouterLink to="/sign-up">Sign Up</RouterLink>
               <RouterLink to="/login-uus">Login</RouterLink>
+              <RouterLink to="/about">About</RouterLink>
             </div>
           </div>
         </div>
