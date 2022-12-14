@@ -1,5 +1,5 @@
 <template>
-  <div class="post">
+  <div class="post" v-on:click="openPostPage">
     <div class="post-header">
         <span>
           <AccountCircleOutline/>
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Post",
   props: {
@@ -47,6 +48,9 @@ export default {
   methods: {
     addLike (post) {
       this.$store.commit('likePost', post)
+    },
+    openPostPage() {
+      this.$router.push(`/post-page/${this.post.id}`)
     }
   }
 }

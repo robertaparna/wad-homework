@@ -13,6 +13,7 @@ export default {
                 console.log(e);
                 console.log("error logout");
             });
+        console.log(this.user.authenticated)
         return this.user.authenticated;
     }
 

@@ -1,26 +1,47 @@
 <template>
-    <div class="SinglePost">
-        <div id="form">
-            <input name="date" type="image" id="image" required v-model="post.date" />
-            <input name="file" type="image" id="image" required v-model="post.picture" />
-            <input name="body" type="text" id="body" required v-model="post.body" />
-            <input name="likes" type="button" id="likes" required v-model="post.likes" />
+  <div class="feed" v-if="">
+    <div class="post">
+      <div id="form">
+        <div class="post-header">
+        <span>
+          <AccountCircleOutline/>
+        </span>
+          <p>
+            {{ post.date }}
+          </p>
         </div>
-        <div>
+        <div class="post-img" v-if="post.picture">
+          <img :src="post.picture">
+        </div>
+        <div class="post-content">
+          <input v-model="post.body">
+        </div>
+        <div class="post-footer">
+          <button v-on:click="addLike(post)">
+            <ThumbUpOutline/>
+          </button>
+          <p>
+            {{ post.likes }}
+          </p>
+          <div>
             <button @click="updatePost" class="updatePost">Update Post</button>
             <button @click="deletePost" class="deletePost">Delete Post</button>
+          </div>
+
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
+import '../assets/index.css'
 export default {
   name: "PostPage",
   data() {
     return {
       post: {
         id: "",
-        title: "",
         date: String,
         body: "",
         likes: Number,
@@ -46,9 +67,8 @@ export default {
       })
         .then((response) => {
           console.log(response.data);
-          //this.$router.push("/apost/" + this.post.id);
           // We are using the router instance of this element to navigate to a different URL location
-          this.$router.push("/api/index");
+          this.$router.push("/");
         })
         .catch((e) => {
           console.log(e);
@@ -63,13 +83,19 @@ export default {
         .then((response) => {
           console.log(response.data);
           // We are using the router instance of this element to navigate to a different URL location
-          this.$router.push("/api/index");
+          this.$router.push("/");
         })
         .catch((e) => {
           console.log(e);
         });
     },
+
   },
+  components: {
+    ThumbUpOutline,
+    AccountCircleOutline
+  },
+
   mounted() {
     // call fetchAPost() when this element mounts, and pass to it a route parameter  (id)
     // Route parameters (this.$route.params.id) are named URL segments that are used to capture the values specified at their 
@@ -78,3 +104,8 @@ export default {
     this.fetchAPost(this.$route.params.id);
   },
 };
+
+import ThumbUpOutline from 'vue-material-design-icons/ThumbUpOutline.vue'
+import AccountCircleOutline from 'vue-material-design-icons/AccountCircleOutline.vue'
+
+</script>

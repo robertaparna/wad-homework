@@ -79,27 +79,15 @@ app.put('/api/posts/:id', async(req, res) => {
     try {
         const { id } = req.params;
         const post = req.body;
+        console.log(post)
         console.log("update request has arrived");
         const updatepost = await pool.query(
-            "UPDATE posttable SET (title, body, urllink) = ($2, $3, $4) WHERE id = $1", [id, post.title, post.body, post.urllink]
+            "UPDATE posttable SET (date, body) = ($2, $3) WHERE id = $1", [id, post.date, post.body]
         );
+        console.log(updatepost)
         res.json(updatepost);
     } catch (err) {
-        console.error(err.message);
-    }
-});
-
-app.delete('/api/posts/:id', async(req, res) => {
-    try {
-        const { id } = req.params;
-        //const post = req.body; // we do not need a body for a delete request
-        console.log("delete a post request has arrived");
-        const deletepost = await pool.query(
-            "DELETE FROM posttable WHERE id = $1", [id]
-        );
-        res.json(deletepost);
-    } catch (err) {
-        console.error(err.message);
+        console.log(err.message);
     }
 });
 
@@ -167,8 +155,6 @@ app.post('/auth/signup', async(req, res) => {
 
 app.get('/auth/authenticate', async(req, res) => {
     console.log('authentication request has been arrived');
-    console.log(req)
-    console.log(req.cookies)
     const token = req.cookies.jwt; // assign the token named jwt to the token const
     console.log("token " + token);
     let authenticated = false; // a user is not authenticated until proven the opposite

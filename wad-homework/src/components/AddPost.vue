@@ -1,10 +1,12 @@
 <template>
+  <body>
   <div class="form">
-      <h3>Add a Post</h3>
-      <label class="Label" for="body">Body</label>
-      <input class="Input" name="body" type="text" id="body" required v-model="post.body"/>
-      <button @click="addPost" class="add-post">Add Post</button>
-      </div>
+    <h3>Add a Post</h3>
+    <label class="Label" for="body">Body</label>
+    <input class="Input" name="body" type="text" id="body" required v-model="post.body"/>
+    <button @click="addPost" class="add-post" v-if="authResult">Add Post</button>
+  </div>
+  </body>
 </template>
 
 <script>
@@ -16,14 +18,16 @@ export default {
       post: {
         body: "",
       },
+      authResult: auth.authenticated()
     };
   },
   methods:{
     addPost(){
-      var data = {
+      let data = {
+        date: new Date().toDateString(),
         body: this.post.body,
       };
-      fetch("http://localhost:5173/#/", {
+      fetch("http://localhost:3000/api/posts/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,7 +36,7 @@ export default {
       })
       .then((response) => {
         console.log(response.data);
-        this.$router.push("");
+        this.$router.push("/");
       })
       .catch((e) => {
         console.log(e);
@@ -41,6 +45,8 @@ export default {
     },
   },
 };
+import auth from '../service/auth'
+
 </script>
 
 <style scoped>

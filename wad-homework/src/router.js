@@ -3,6 +3,7 @@ import Index from './components/Index.vue'
 import SignUp from './components/SignUp.vue'
 import AddPost from './components/AddPost.vue'
 import LoginUus from "@/components/LoginUus.vue";
+import PostPage from "@/components/PostPage.vue";
 
 const routes = [{
         path: '/',
@@ -23,6 +24,11 @@ const routes = [{
         path: '/login-uus',
         name: 'login-uus',
         component: LoginUus
+    },
+    {
+        path: '/post-page/:id',
+        name: 'post-page',
+        component: PostPage
     }
 ]
 
