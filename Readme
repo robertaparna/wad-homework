@@ -1,3 +1,6 @@
 valideerimiseks kasutasin https://jsonlint.com/
 
 hoiustamiseks? https://jsonbin.io/, https://www.jsonkeeper.com/ ?
+
+web dev server - wad-homework : npm run dev
+backend server - wad-homework/src/service : nodemon server

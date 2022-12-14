@@ -20,6 +20,11 @@ export default {
       return this.$store.state.posts;
     }
   },
+  data: function () {
+    return {
+      authResult: auth.authenticated()
+    }
+  },
   components: {
     ThumbUpOutline,
     AccountCircleOutline,
@@ -40,6 +45,7 @@ import '../assets/index.css'
 import ThumbUpOutline from "vue-material-design-icons/ThumbUpOutline.vue";
 import AccountCircleOutline from 'vue-material-design-icons/AccountCircleOutline.vue'
 import Post from "@/components/Post.vue";
+import auth from '../service/auth'
 
 
 </script>

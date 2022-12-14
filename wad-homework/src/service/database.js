@@ -34,7 +34,7 @@ const createTblQuery = `
 const createUserTblQuery = `
     CREATE TABLE IF NOT EXISTS "usertable" (
 	    "id" SERIAL PRIMARY KEY,         
-	    "email" VARCHAR(200) NOT NULL,
+	    "email" VARCHAR(200) NOT NULL UNIQUE,
 	    "password" VARCHAR(200) NOT NULL
     );`;
 

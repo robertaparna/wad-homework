@@ -5,7 +5,7 @@ import router from './router';
 import './assets/generic.css'
 
 const app = createApp(App);
-app.use(store)
 app.use(router)
+app.use(store)
 app.mount('#app')
 //createApp(App).use(store).use(router).mount('#app')
